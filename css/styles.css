@@ -61,6 +61,25 @@ body {
   margin-right: auto;
 }
 
+/* ===== Навигация сайта
+Portfolio page ===== */
+.portfolio-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ===== Навигация сайта Start ===== */
+.container--top {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
 /* Logo */
 .logo {
   font-family: "Raleway", sans-serif;
@@ -68,46 +87,24 @@ body {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
-}
-
-.logo-web {
   color: var(--accent);
 }
 
-.logo-black {
+.logo__ending {
   color: #000000;
 }
 
-/* ===== Навигация сайта
-    Portfolio page ===== */
-.portfolio-header {
-  border-bottom: 1px solid var(--border-color);
-}
-
-/* ===== Навигация сайта Start ===== */
-.container.header {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.navigate {
+.site-nav__set {
   margin-left: 93px;
-}
-
-.links-pages {
   display: flex;
 }
 
-.links-pages > .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.link {
+.site-nav__link,
+.contact__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -120,13 +117,16 @@ body {
   transition: color var(--time-duration) var(--cubic-func);
 }
 
-.current-page,
-.link:hover,
-.link:focus {
+.site-nav__link--current,
+.site-nav__link:hover,
+.site-nav__link:focus,
+.contact__link:hover,
+.contact__link:focus {
   color: var(--accent);
 }
 
-.links-pages .link::after {
+.site-nav__link--current::after,
+.site-nav__link::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -143,36 +143,27 @@ body {
     transform var(--time-duration) var(--cubic-func);
 }
 
-.current-page.link::after,
-.links-pages .link:hover::after {
+.site-nav__link--current::after,
+.site-nav__link:hover::after {
   opacity: 1;
   transform: scaleX(1);
 }
 
-.links-contact {
+.contact-set {
   display: flex;
   margin-left: auto;
 }
 
-.links-contact > .item:not(:last-child) {
+.contact:not(:last-child) {
   margin-right: 50px;
 }
 
-.contact {
-  color: var(--text-color);
-}
-
-.link.contact {
+.contact__link {
   display: flex;
   align-items: center;
 }
 /* Icon */
-.icon-envelope {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.icon-smartphone {
+.contact__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -445,7 +436,7 @@ body {
   margin-bottom: 20px;
 }
 
-.logo-white {
+.logo__ending--inverse {
   color: #ffffff;
 }
 
